@@ -30,7 +30,7 @@ const AppBar = styled(MuiAppBar, {
   }));
 
 const Navbar = () => {
-    const { activeMenu, setActiveMenu } = useStateContext();
+    const { activeMenu, setActiveMenu, Menu } = useStateContext();
     
     const toggleDrawer = () => {
     setActiveMenu(!activeMenu);
@@ -62,7 +62,7 @@ return (
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              {Menu}
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
